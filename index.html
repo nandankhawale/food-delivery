@@ -1,99 +1,618 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TastyBites</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
   <style>
-    /* Custom CSS to style the navbar brand and links */
-    .navbar-brand {
-      font-size: 1.5rem; /* Larger font size for the brand name */
-      font-weight: bold;
-     /* Make the brand name bold */
-    }
-    .nav-link {
-      font-size: 1.2rem; /* Larger font size for navigation links */
-      font-weight: bold; /* Make navigation links bold */
-    }
-    .navbar-nav .nav-item .nav-link {
-      margin-left: 15px; /* Add some space between navigation links */
-      
-    }
-    .nav-item{
-        transition: transform 250ms, opacity 400ms;
-    }
-    .nav-item:hover {
-        transform: scale(1.2);
-        opacity: 0;
-    }
-    /* Adjust the carousel size */
-    .carousel-inner img {
-      height: 500px; /* Set a fixed height for carousel images */
-      object-fit: cover; /* Ensure images cover the carousel area */
-    }
+     
   </style>
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg text-center fixed-top bg-warning bg-gradient p-4">
-    <div class="container-fluid justify-content-center"><!-- Changed: Added 'justify-content-center' to center the container content -->
-      <a class="navbar-brand d-flex align-items-center " href="#"><!-- Changed: Added 'd-flex align-items-center' to vertically center align logo and text -->
-        <img src="fucked.jpg" alt="Logo" width="50" height="50" class="rounded d-inline-block align-text-left me-2"> TastyBites
-      </a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0"><!-- Changed: Added 'mx-auto' to center the navigation links -->
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Items</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+ 
+  <nav class="navbar navbar-expand-lg text-center fixed-top">
+    <div class="container-fluid justify-content-center">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="icons.jpg" alt="Logo" width="50" height="50" class="rounded d-inline-block align-text-left me-2">
+            TastyBites
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#items-section">Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#special-section">Special</a>
+                </li>
+            </ul>
+            <a class="nav-link position-relative pe-4" href="#cart">
+                <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
+                <!-- Badge for cart item count -->
+            </a>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success me-2" type="submit">Search</button>
+            </form>
+            
+            <!-- Cart Icon -->
+            
+        </div>
     </div>
-  </nav>
-  <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel"><!-- Changed: Added 'carousel-fade' class and 'data-bs-ride="carousel"' attribute for autoplay and fading effect -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button><!-- Changed: Corrected data-bs-target to match carousel id -->
-      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button><!-- Changed: Corrected data-bs-target to match carousel id -->
-      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button><!-- Changed: Corrected data-bs-target to match carousel id -->
-    </div>
-    <div class="carousel-inner">
+</nav>
+
+
+
+<div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="pizza.jpeg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
-        </div>
+          <img src="pizza.jpeg" class="d-block w-100" alt="Delicious Pizza">
+          <div class="carousel-caption d-none d-md-block">
+              <h5>Delicious Burger</h5>
+              <p>Indulge in our freshly baked pizzas, made with the finest ingredients. Enjoy a perfect blend of flavors that will delight your taste buds!</p>
+          </div>
       </div>
       <div class="carousel-item">
-        <img src="bhamba.webp" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
-        </div>
+          <img src="bhamba.webp" class="d-block w-100" alt="Tasty Bhamba">
+          <div class="carousel-caption d-none d-md-block">
+              <h5>Tasty Bhamba</h5>
+              <p>Experience the rich and aromatic flavors of our traditional bhamba dish. A culinary journey that brings the essence of home-cooked meals to your table.</p>
+          </div>
       </div>
       <div class="carousel-item">
-        <img src="fandum.jpeg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
+          <img src="fandum.jpeg" class="d-block w-100" alt="Fandum Delight">
+          <div class="carousel-caption d-none d-md-block">
+              <h5>Fandum Delight</h5>
+              <p>Discover the unique taste of Fandum, a delightful fusion of spices and textures that will leave you craving more. Perfect for every occasion!</p>
+          </div>
       </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><!-- Changed: Corrected data-bs-target to match carousel id -->
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><!-- Changed: Corrected data-bs-target to match carousel id -->
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
-    </button>
+  </button>
+</div>
+
+
+
+  <div class="IDK mt-0 pd-5">
+    <div class="alert alert-custom alert-dismissible fade show d-flex justify-content-center align-items-center" role="alert">
+        <i class="bi bi-bell alert-icon"></i> <!-- Bootstrap Icons (Make sure to include Bootstrap Icons CSS) -->
+        <strong>ORDER NOW!</strong>&nbsp; FREE DELIVERY OVER ₹499!!!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+
+
+<!-- First Section: Statistics -->
+<div class="container-fluid stats-section text-center pt-4" style="background-color: #d4edda;"> <!-- Background color applied -->
+  <div class="container py-5">
+    <div class="row align-items-center">
+      
+      <!-- Heading Section -->
+      <div class="col-lg-4 col-md-12 mb-4">
+        <h2 class="fw-bold text-dark">
+          <b>Service shows <br> good taste.</b>
+        </h2>
+      </div>
+      
+      <!-- Statistics Section -->
+      <div class="col-lg-8 col-md-12">
+        <div class="row">
+          
+          <!-- Satisfied Customers -->
+          <div class="col-sm-4 mb-4">
+            <div class="p-3 stat-box rounded shadow" style="background-color: #ffffff;"> <!-- Background remains white for contrast -->
+              <h1 class="text-warning display-4 fw-bold">976+</h1>
+              <p class="text-muted">Satisfied Customers</p>
+            </div>
+          </div>
+          
+          <!-- Best Restaurants -->
+          <div class="col-sm-4 mb-4">
+            <div class="p-3 stat-box rounded shadow" style="background-color: #ffffff;"> <!-- Background remains white for contrast -->
+              <h1 class="text-warning display-4 fw-bold">12+</h1>
+              <p class="text-muted">Best Restaurants</p>
+            </div>
+          </div>
+          
+          <!-- Food Delivered -->
+          <div class="col-sm-4 mb-4">
+            <div class="p-3 stat-box rounded shadow" style="background-color: #ffffff;"> <!-- Background remains white for contrast -->
+              <h1 class="text-warning display-4 fw-bold">1K+</h1>
+              <p class="text-muted">Food Delivered</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</div>
+
+<!-- Second Section: Cards -->
+<div class="container-fluid" style="background-color: #d4edda; border-radius: 15px; padding: 40px;"> <!-- Same background color applied -->
+  <div class="row justify-content-around pb-3 mb-3">
+
+    <!-- Card 1 -->
+    <div class="col-lg-4 col-md-5 col-sm-12 mb-4">
+      <div class="card rounded-3 h-100 shadow-lg" style="background-color: #ffffff; height: 350px;"> <!-- Background remains white for contrast -->
+        <div class="position-relative">
+          <img src="/images/1.avif" class="card-img-top" alt="Order online" style="height: 250px; object-fit: cover; border-radius: 0.5rem 0.5rem 0 0;">
+          <span class="position-absolute top-0 start-0 m-2 translate-middle badge rounded-pill bg-dark">
+            <i class="bi bi-camera-reels-fill"></i> 8
+          </span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center">Order Online</h5>
+          <p class="card-text text-center text-muted">Stay home and order to your doorstep</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-lg-4 col-md-5 col-sm-12 mb-4">
+      <div class="card rounded-3 h-100 shadow-lg" style="background-color: #ffffff; height: 350px;"> <!-- Background remains white for contrast -->
+        <div class="position-relative">
+          <img src="/images/2.avif" class="card-img-top" alt="Dining view" style="height: 250px; object-fit: cover; border-radius: 0.5rem 0.5rem 0 0;">
+          <span class="position-absolute top-0 end-0 m-2 translate-middle badge rounded-pill bg-dark">
+            <i class="bi bi-camera-reels-fill"></i> 8
+          </span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center">Dining</h5>
+          <p class="card-text text-center text-muted">View the city's favourite dining venues</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="items-section" class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 card-item" data-title="KFC">
+      <div class="card">
+        <img src="/images/kfc.avif" alt="KFC" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">KFC</h5>
+          <p class="card-text">4.2 • 25-30 mins • Burgers, Biryani, American • Puna wale</p>
+          <p class="discount">40% OFF UPTO ₹80</p>
+          <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 card-item" data-title="Burger King">
+      <div class="card">
+        <img src="/images/bk.avif" alt="Burger King" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Burger King</h5>
+          <p class="card-text">4.2 • 35-40 mins • Burgers, American • Tathawade</p>
+          <p class="discount">60% OFF UPTO ₹120</p>
+          <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 card-item" data-title="McDonald's">
+      <div class="card">
+        <img src="/images/mcd.avif" alt="McDonald's" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">McDonald's</h5>
+          <p class="card-text">4.5 • 30-35 mins • Burgers, Beverages, Cafe • Wakad</p>
+          <p class="discount">30% OFF UPTO ₹70</p>
+          <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 card-item" data-title="Pizza Hut">
+      <div class="card">
+        <img src="/images/pizzahut.avif" alt="Pizza Hut" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Pizza Hut</h5>
+          <p class="card-text">4.1 • 25-30 mins • Pizzas • Hinjawadi</p>
+          <p class="discount">50% OFF UPTO ₹100</p>
+          <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 card-item" data-title="Navratri Meals by LunchBox">
+      <div class="card">
+        <img src="/images/navmeals.avif" alt="Navratri Meals by LunchBox" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Navratri Meals by LunchBox</h5>
+          <p class="card-text">4.5 • 20-25 mins • Biryani, North Indian, Desserts • Hinjewadi</p>
+          <p class="discount">ITEMS AT ₹149</p>
+          <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 card-item" data-title="Olio - The Wood Fired Pizzeria">
+      <div class="card">
+        <img src="/images/olio.avif" alt="Olio - The Wood Fired Pizzeria" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Olio - The Wood Fired Pizzeria</h5>
+          <p class="card-text">4.4 • 35-40 mins • Pizzas, Pastas, Fast Food, Snacks • Haveli</p>
+          <p class="discount">₹125 OFF ABOVE ₹249</p>
+          <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 card-item" data-title="Grameen Kulfi">
+      <div class="card">
+        <img src="/images/kulfi.avif" alt="Grameen Kulfi" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Grameen Kulfi</h5>
+          <p class="card-text">4.7 • 20-25 mins • Ice Cream, Desserts • Wakad</p>
+          <p class="discount">50% OFF UPTO ₹100</p>
+          <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 card-item" data-title="Wow! China">
+      <div class="card">
+        <img src="/images/china.avif" alt="Wow! China" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Wow! China</h5>
+          <p class="card-text">3.7 • 35-40 mins • Tibetan, Chinese, Asian, Snacks • RGI Park</p>
+          <p class="discount">ITEMS AT ₹129</p>
+          <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col text-center">
+      <a href="#" class="custom-button mb-4">View More Items</a> <!-- Button for viewing more items -->
+    </div>
+  </div>
+</div>
+
+
+<div id="special-section" class="container-fluid py-5" style="background: linear-gradient(to bottom right, #fbd786, #f7797d);">
+  <div class="container text-center">
+    <h1 class="mb-5"><b>Our's Special</b></h1>
+    <div class="row justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="card h-100 shadow-lg rounded-3 p-4" style="background-color: #fff5e1; min-height: 450px;">
+          <div class="icon fs-1">🍔</div>
+          <h2 class="mt-4">Tasty Burger</h2>
+          <p class="mt-3">In Our Tasty Burger, A Perfect Blend Of Succulent, Premium Beef, Fresh, Crisp Vegetables, And Our Signature Sauce. Each Bite Promises A Burst Of Mouthwatering Flavors That Will Leave You Craving More!</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="card h-100 shadow-lg rounded-3 p-4" style="background-color: #fff5e1; min-height: 450px;">
+          <div class="icon fs-1">🍕</div>
+          <h2 class="mt-4">Tasty Pizza</h2>
+          <p class="mt-3">Savor Our Tasty Pizza, Crafted With A Crispy, Golden Crust, Rich Tomato Sauce, And The Freshest Toppings. Melted Cheese And A Perfect Blend Of Herbs Make Every Slice A Delightful Experience!</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="card h-100 shadow-lg rounded-3 p-4" style="background-color: #fff5e1; min-height: 450px;">
+          <div class="icon fs-1">🍦</div>
+          <h2 class="mt-4">Cold Ice-Cream</h2>
+          <p class="mt-3">Treat Yourself To Our Cold Ice Cream, A Creamy, Dreamy Delight That Melts In Your Mouth. Refreshingly Cool And Irresistibly Smooth, Perfect For Any Time Of Day!</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="card h-100 shadow-lg rounded-3 p-4" style="background-color: #fff5e1; min-height: 450px;">
+          <div class="icon fs-1">🍹</div>
+          <h2 class="mt-4">Cold Drinks</h2>
+          <p class="mt-3">Quench Your Thirst With Our Cold Drinks, A Refreshing Selection Of Beverages That Offer A Burst Of Cool, Invigorating Flavors. Enjoy The Chill!</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="card h-100 shadow-lg rounded-3 p-4" style="background-color: #fff5e1; min-height: 450px;">
+          <div class="icon fs-1">🎂</div>
+          <h2 class="mt-4">Tasty Sweets</h2>
+          <p class="mt-3">Delight In Our Tasty Sweets, A Heavenly Assortment Of Desserts Crafted To Satisfy Your Sweet Tooth. Enjoy The Sweetness In Every Bite!</p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="card h-100 shadow-lg rounded-3 p-4" style="background-color: #fff5e1; min-height: 450px;">
+          <div class="icon fs-1">☕</div>
+          <h2 class="mt-4">Tasty Breakfast</h2>
+          <p class="mt-3">Start Your Day Right With Our Delicious Breakfast Options, Perfect For Kickstarting Your Day!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid py-5" style="background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);">
+  <div class="container text-center">
+    <div class="header-title mb-5">
+      <h1 class="fw-bold" style="color: #333;">Best Restaurants in Your City</h1>
+      <p class="text-muted">Discover top dining experiences near you! Whether you crave American classics, exotic flavors, or healthy options, we have something to satisfy every palate. Explore the finest restaurants that bring people together through the joy of food.</p>
+    </div>
+    
+    <!-- Restaurant Cards -->
+    <div class="row">
+      <!-- Restaurant 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="restaurant-card p-4 shadow rounded-3 h-100" style="background-color: #ffffff; transition: transform 0.3s; overflow: hidden;">
+          <div class="restaurant-header d-flex align-items-center">
+            <img src="OIP (10).jpeg" alt="Restaurant Logo" class="restaurant-logo rounded-circle me-3" style="width: 60px; height: 60px;">
+            <div>
+              <h3 class="restaurant-title fw-bold mb-0" style="color: #333;">The Wilmington</h3>
+              <div class="rating-stars" style="color: #ffa500;">★★★★☆</div>
+              <div class="restaurant-tags mt-2">
+                <span class="badge bg-primary me-1">American</span>
+                <span class="badge bg-success">Steakhouse</span>
+              </div>
+            </div>
+          </div>
+          <p class="restaurant-description mt-3 text-muted">
+            Known for its signature steaks and classic American dishes, The Wilmington offers a cozy yet sophisticated atmosphere. Enjoy a premium dining experience with perfectly cooked steaks and fresh sides.
+          </p>
+        </div>
+      </div>
+
+      <!-- Restaurant 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="restaurant-card p-4 shadow rounded-3 h-100" style="background-color: #ffffff; transition: transform 0.3s; overflow: hidden;">
+          <div class="restaurant-header d-flex align-items-center">
+            <img src="OIP (8).jpeg" alt="Restaurant Logo" class="restaurant-logo rounded-circle me-3" style="width: 60px; height: 60px;">
+            <div>
+              <h3 class="restaurant-title fw-bold mb-0" style="color: #333;">Sunset Diner</h3>
+              <div class="rating-stars" style="color: #ffa500;">★★★★☆</div>
+              <div class="restaurant-tags mt-2">
+                <span class="badge bg-primary me-1">American</span>
+                <span class="badge bg-success">Comfort Food</span>
+              </div>
+            </div>
+          </div>
+          <p class="restaurant-description mt-3 text-muted">
+            The perfect place for hearty, comforting meals that remind you of home. Sunset Diner serves up large portions of your favorite comfort food dishes, from burgers to classic mac 'n cheese.
+          </p>
+        </div>
+      </div>
+
+      <!-- Restaurant 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="restaurant-card p-4 shadow rounded-3 h-100" style="background-color: #ffffff; transition: transform 0.3s; overflow: hidden;">
+          <div class="restaurant-header d-flex align-items-center">
+            <img src="OIP (9).jpeg" alt="Restaurant Logo" class="restaurant-logo rounded-circle me-3" style="width: 60px; height: 60px;">
+            <div>
+              <h3 class="restaurant-title fw-bold mb-0" style="color: #333;">Kings Arms</h3>
+              <div class="rating-stars" style="color: #ffa500;">★★★★☆</div>
+              <div class="restaurant-tags mt-2">
+                <span class="badge bg-primary me-1">American</span>
+                <span class="badge bg-success">Healthy</span>
+              </div>
+            </div>
+          </div>
+          <p class="restaurant-description mt-3 text-muted">
+            Kings Arms redefines healthy dining with its innovative menu that focuses on fresh, organic ingredients. A great choice for those who want a delicious meal without compromising on nutrition.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single More Reviews Button -->
+    <a href="#" class="btn btn-primary mt-4">More Reviews</a>
+  </div>
+</div>
+
+
+
+
+<div class="container-fluid pt-4 pb-3 px-3" style="background: #fff3e0;">
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    
+    <!-- Accordion Item 1 -->
+    <div class="accordion-item rounded-3 mb-4 shadow">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseOne"style aria-expanded="false" aria-controls="flush-collapseOne">
+          Popular Restaurant Types Near Me
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body rounded-3">
+          <span class="me-2">Bakeries near me</span>
+          <span class="me-2">Bars near me</span>
+          <span class="me-2">Beverages near me</span>
+          <span class="me-2">Cafe near me</span>
+          <span class="me-2">Dining near me</span>
+          <span>Clubs near me</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Accordion Item 2 -->
+    <div class="accordion-item rounded-3 mb-3 shadow">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          Top Restaurant Chains
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body rounded-3">
+          <span class="me-2">Burger King</span>
+          <span class="me-2">Domino's</span>
+          <span class="me-2">WOW! Momo</span>
+          <span class="me-2">Subway</span>
+          <span>McDonald's</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Accordion Item 3 -->
+    <div class="accordion-item rounded-3 mb-3 shadow">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          Cities We Deliver To
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body rounded-3">
+          <span class="me-2">Delhi NCR</span>
+          <span class="me-2">Kolkata</span>
+          <span class="me-2">Pune</span>
+          <span class="me-2">Amravati</span>
+          <span class="me-2">Kochi</span>
+          <span class="me-2">Jaipur</span>
+          <span>Goa</span>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+      
+<footer class="bg-dark pt-5 text-center text-lg-start">
+  <div class="container p-1 pt-4">
+      <div class="row g-0">
+          <!-- Section 1 -->
+          <div class="col-lg-2 text-light col-md-6 mb-4 px-2">
+              <h5>About Us</h5>
+              <ul class="list-unstyled">
+                  <li class="mb-3">
+                      <a href="#!" class="link-offset-2 link-underline link-underline-opacity-0 text-light p-2">Our Story</a>
+                  </li>
+                  <li class="mb-3">
+                      <a href="#!" class="link-offset-2 link-underline link-underline-opacity-0 text-light p-2">Team</a>
+                  </li>
+                  <li class="mb-3">
+                      <a href="#!" class="link-offset-2 link-underline link-underline-opacity-0 text-light p-2">Careers</a>
+                  </li>
+                  <li class="mb-3">
+                      <a href="#!" class="link-offset-2 link-underline link-underline-opacity-0 text-light p-2">Sustainability</a>
+                  </li>
+              </ul>
+          </div>
+
+          <!-- Section 2 -->
+          <div class="col-lg-2 text-light col-md-6 mb-4 px-1">
+              <h5>Services</h5>
+              <ul class="list-unstyled">
+                  <li class="mb-3">
+                      <a href="#!" class="link-offset-2 link-underline link-underline-opacity-0 text-light p-2">Food Delivery</a>
+                  </li>
+                  <li class="mb-3">
+                      <a href="#!" class="link-offset-2 link-underline link-underline-opacity-0 text-light p-2">Meal Subscriptions</a>
+                  </li>
+                  <li class="mb-3">
+                      <a href="#!" class="link-offset-2 link-underline link-underline-opacity-0 text-light p-2">Catering</a>
+                  </li>
+                  <li class="mb-3">
+                      <a href="#!" class="link-offset-2 link-underline link-underline-opacity-0 text-light p-2">Gift Cards</a>
+                  </li>
+              </ul>
+          </div>
+
+          <!-- Section 3 -->
+          <div class="col-lg-2 text-light col-md-6 mb-4 px-1">
+              <h5>Support</h5>
+              <ul class="list-unstyled">
+                  <li class="mb-3">
+                      <a href="#!" class="link-offset-2 link-underline link-underline-opacity-0 text-light p-2">Help Center</a>
+                  </li>
+                  <li class="mb-3">
+                      <a href="#!" class="link-offset-2 link-underline link-underline-opacity-0 text-light p-2">Contact Us</a>
+                  </li>
+                  <li class="mb-3">
+                      <a href="#!" class="link-offset-2 link-underline link-underline-opacity-0 text-light p-2">Shipping & Delivery</a>
+                  </li>
+                  <li class="mb-3">
+                      <a href="#!" class="link-offset-2 link-underline link-underline-opacity-0 text-light p-2">Return Policy</a>
+                  </li>
+              </ul>
+          </div>
+
+          <!-- Empty Spacer -->
+          <div class="col-lg-1 text-light col-md-6 mb-4 px-1"></div>
+
+          <!-- Brand and Subscription Section -->
+          <div class="col-lg-4 text-light col-md-6 mb-4 px-1">
+              <div class="container-fluid pb-3">
+                  <a class="navbar-brand " href="#">
+                      <img src="/icons.jpg" alt="TastyBites Logo" width="50" height="50" class="rounded d-inline-block align-text-left me-2">
+                      TastyBites
+                  </a>
+                  <p class="mt-3">Your go-to source for fresh and healthy meals delivered right to your door. Join us in our mission to make dining easy and delicious for everyone.</p>
+              </div>
+              <form action="">
+                  <div class="input-group mb-3">
+                      <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email address">
+                      <div class="input-group-append">
+                          <button class="btn btn-primary" type="submit">Subscribe</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
+  <!-- Footer Bottom Text -->
+  <div class="text-center text-light bg-dark py-3">
+      &copy; 2024 TastyBites, Inc. All rights reserved.
+  </div>
+  <div class="text-center p-1 pb-3">
+      <a href="#!" class="text-light me-2">Twitter</a>
+      <a href="#!" class="text-light me-2">Facebook</a>
+      <a href="#!" class="text-light me-2">LinkedIn</a>
+      <a href="#!" class="text-light me-2">Pinterest</a>
+  </div>
+</footer>
+
+</div>
+  <script  src="scripts.js">
+   
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

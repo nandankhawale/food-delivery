@@ -1,0 +1,399 @@
+body {
+    background-color: #FFEBCC; /* Change this to your chosen color */
+  }
+  
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    margin-left: 15px;
+  }
+
+  .nav-item {
+    transition: transform 250ms, opacity 400ms;
+  }
+
+  .nav-item:hover {
+    transform: scale(1.2);
+    opacity: 40%;
+  }
+
+  .carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card-body .btn {
+    margin-top: auto;
+    margin-left: 0;
+  }
+
+  .card {
+    min-height: 200px;
+    /* Adjust this value as needed */
+    transition: transform 250ms;
+  }
+
+  .card .row.g-0 {
+    height: 100%;
+  }
+
+  .card img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .IDK {
+    background-color: #fff5d7
+  }
+
+  .color {
+    background-color: #A9C9FF;
+    background-image: linear-gradient(90deg, #A9C9FF 0%, #FFBBEC 100%);
+
+
+
+  }
+
+  .accordion-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 16px;
+  }
+
+  .accordion-body::after {
+    content: "•";
+    margin-left: 5px;
+
+  }
+
+  .accordion-body span::after {
+    content: "•";
+    margin-left: 5px;
+  }
+
+  .accordion-body span:last-child::after {
+    content: "";
+  }
+
+  .yellow-bg {
+    background-color: white;
+  }
+
+  .alert-custom {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .alert-custom strong {
+    font-size: 1.4rem;
+  }
+
+  .alert-custom .btn-close {
+    filter: invert(1);
+  }
+
+  .alert-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
+
+  
+
+/***** Section *****/  /***** End Section *****/
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #e74c3c;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h2 {
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.card p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.icon {
+  font-size: 40px;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.header-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header-title h1 {
+  font-size: 2.5rem;
+  font-weight: 600; /* Font weight from Poppins */
+}
+
+.header-title p {
+  color: #6c757d;
+  font-weight: 400; /* Normal weight */
+}
+
+.restaurant-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  transition: box-shadow 0.3s;
+}
+
+.restaurant-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+
+.restaurant-header {
+  display: flex;
+  align-items: center;
+}
+
+.restaurant-title {
+  font-size: 1.5rem;
+  font-weight: 600; /* Font weight from Poppins */
+  margin: 0;
+}
+
+.restaurant-tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #ffd700;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.rating-stars {
+  color: #f39c12;
+}
+
+.restaurant-description {
+  margin-top: 15px;
+  color: #6c757d;
+}
+
+
+
+
+
+
+
+
+
+  .restaurant-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+
+  .card {
+    margin: 20px;
+}
+.card img {
+    height: 200px; /* Increased height */
+    width: 100%; /* Ensures the image covers the width */
+    object-fit: cover; /* Keeps aspect ratio */
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+.card-body {
+    padding: 10px;
+}
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.card-text {
+    font-size: 14px;
+    color: #666;
+}
+.discount {
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+}
+
+
+
+
+body {
+  background: linear-gradient(to right, #f8b500, #ffdd00);/* A warm gradient resembling food-related colors */
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9); /* Adding slight transparency for better contrast with the background */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.discount {
+  color: #ff5722; /* Highlight the discount text with a bright color */
+  font-weight: bold;
+}
+
+h5.card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+
+
+.custom-button {
+  background-color: red; /* Custom red color */
+  padding: 15px 30px; /* Custom padding */
+  color: white; /* Text color */
+  border: none; /* No border */
+  font-size: 1.2em; /* Font size */
+  border-radius: 25px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Allow padding and margin to work correctly */
+}
+
+.custom-button:hover {
+  background-color: darkred; /* Darker shade on hover */
+}
+
+
+
+
+.alert-custom {
+  text-align: center; /* Center the text inside the alert */
+}
+
+.alert-icon {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+
+
+.navbar {
+  background: linear-gradient(to right, #ffcc00, #ff9900); /* Gradient background */
+}
+.navbar-nav .nav-link {
+  color: white; /* Text color for nav links */
+  text-decoration: none; /* Remove underline */
+  opacity: 1; /* Set default opacity */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+.navbar-nav .nav-link:hover {
+  color: #ffd700; /* Color on hover */
+  opacity: 0.8; /* Reduced opacity on hover */
+}
+.navbar-nav .nav-link.active {
+  font-weight: bold; /* Make active link bold */
+  text-decoration: none; /* Ensure no underline on active link */
+}
+.form-control {
+  border-radius: 20px; /* Rounded corners for the search input */
+}
+.btn-outline-success {
+  border-radius: 20px; /* Rounded corners for the button */
+  border-color: white; /* White border color */
+  color: white; /* White text color */
+}
+.btn-outline-success:hover {
+  background-color: white; /* Background on hover */
+  color: #ff9900; /* Text color on hover */
+}
+
+
+.carousel-item img {
+  height: 500px; /* Set the height of the carousel images */
+  object-fit: cover; /* Ensure the image covers the entire area without stretching */
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+      height: 300px; 
+  }
+}
